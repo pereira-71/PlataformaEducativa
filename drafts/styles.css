@@ -1,0 +1,527 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    border: 1px solid black;
+}
+
+
+.container .principal{
+    display: flex;
+}
+
+.container .principal .container-opciones{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    border: 1px solid black;
+}
+
+.container .principal .container-opciones .opciones{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .principal .container-opciones .opciones img{
+    width: 100%;
+}
+
+.container .principal .container-opciones .opciones .opcion{
+    background: rgb(189, 71, 38);
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+.container .principal .container-opciones .opciones .opcion a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 8px;
+    text-align: center;
+
+}
+
+.container .principal .container-opciones .sub-menu{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid black;
+}
+
+.principal .container-opciones .sub-menu .detalle{
+    border: 2px solid rgb(248, 105, 34);
+    padding: 8px;
+    text-align: center;
+    color: rgb(68, 68, 68);
+    
+}
+
+.principal .container-opciones .sub-menu .detalle:hover{
+    background: rgb(248, 105, 34);
+    color: white;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.container .pie{
+    width: 100%;
+    background: orange;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid rgb(46, 45, 45);
+}
+
+.principal .navigation{
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+}
+
+
+.principal .navigation .menu{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    background: orange;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+.principal .navigation .menu .botenes{
+    display: flex;
+    border-right: 1px solid black;
+    height: 40px;
+    border-right: 2px solid rgb(6, 6, 6);
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal .navigation .menu .btn_5{
+    border: none;
+}
+
+.principal .navigation .menu .botenes a .btn{
+    background: white;
+    padding: 10px;
+    width: 120px;
+    font-weight: bold;
+}
+
+.principal .navigation .menu .botenes .btn4{
+    background: white;
+    padding: 10px;
+    width: 120px;
+    font-weight: bold;
+}
+
+.principal .navigation .menu .botenes .btn4:hover{
+    background: black;
+    color: white
+}
+
+.principal .navigation .menu .botenes a .btn:hover{
+    background: black;
+    color: white
+}
+
+.principal .navigation .titulo{
+    width: 100%;
+    padding: 14px;
+    background: rgb(254, 220, 172);
+    text-align: center;
+    font-weight: bold;
+    border: 2px dotted black;
+}
+
+
+/* CONTENIDO  */
+.principal .navigation .contenido{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal .navigation .contenido .card-container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: -2px 3px 8px rgb(146, 145, 145);
+
+}
+
+.principal .navigation .contenido .card-container .title{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    background: rgb(194, 198, 246);
+    padding: 20px;
+    padding-bottom: 55px;
+}
+
+.principal .navigation .contenido .card-container .perfil{
+    position: absolute;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(241, 238, 238);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    margin-left: 25px;
+}
+
+.principal .navigation .contenido .card-container .perfil img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+.principal .navigation .contenido .card-container .title h2, p{
+    color: rgb(104, 116, 249);
+    font-weight: bold;
+}
+
+.principal .navigation .contenido .card-container .datos{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    padding-top: 70px;
+    margin-bottom: 20px;
+}
+
+.principal .navigation .contenido .card-container .datos h2{
+    font-size: 1.4rem;
+    color: rgb(107, 106, 106);
+    margin-bottom: 10px;
+}
+
+.principal .navigation .contenido .card-container .datos p{
+    color: rgb(131, 129, 129);
+}
+
+.sub-menu .detalle:hover{
+    background: orangered;
+    color: white;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.sub-menu a{
+    text-decoration: none;
+}
+
+.sub-menu .respuesta{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-menu .respuesta input{
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid orangered;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.correcto{
+    background: rgb(8, 190, 8);
+}
+
+.incorrecto{
+    background: red;
+}
+
+.contenido .respuestas{
+    color: black;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.contenido .respuestas input{
+    padding: 5px;
+    width: 70px;
+    border-radius: 3px;
+    border: 2px solid rgb(49, 49, 238);
+}
+
+.btn_calificar{
+    margin-top: 10px;
+    width: 70px;
+    padding: 8px;
+    background: rgb(35, 104, 232);
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container-alumnos{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.container-alumnos .tabla-alumnos{
+    width: 100%;
+
+}
+
+.container-alumnos .tabla-alumnos th{
+    background: orange;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+.container-alumnos .tabla-alumnos td{
+    border: 1.5px solid orange;
+    background: rgb(248, 237, 217);
+    text-align: center;
+    padding: 5px;
+}
+
+
+.btn_insertar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+.formulario {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.formulario div {
+    margin-bottom: 15px;
+}
+
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario .btn_insertar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario .btn_insertar:hover {
+    background-color: #45a049;
+}
+
+#sub-menu h3{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.container-libros{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container-libros table{
+    width: 100%;
+}
+
+.container-libros h2{
+    text-align: center;
+}
+
+
+
+.formulario-libros{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formulario-libros form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    border: 2px solid rgba(59, 59, 59, 0.763);
+    border-radius: 3px;
+    padding: 20px;
+    align-items: center;
+}
+
+.formulario-libros form .perfil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn_registrar{
+    background: rgb(36, 110, 236);
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.formulario-libros form select, input{
+    padding: 5px;
+}
+
+.btn_editar{
+    background: rgb(5, 176, 5);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn_eliminar{
+    background: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+.color-fondos {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color-fondos h2 {
+    color: #333;
+    text-align: center;
+}
+
+.color-fondos div {
+    margin-bottom: 10px;
+}
+
+.color-fondos label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.color-fondos input{
+    padding: 5px;
+}
+
+.color-fondos select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.color-fondos button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 70px;
+    margin-left: 80px;
+}
+
+.color-fondos button:hover {
+    background-color: #45a049;
+}
+

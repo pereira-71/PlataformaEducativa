@@ -1,0 +1,240 @@
+/* */
+:root {
+    --color-primario: #ff7eb9; /* Rosa chic */
+    --color-secundario: #ffd3e0; /* Rosa pastel */
+    --color-acento: #d8a7ca; /* Lila suave */
+    --color-acento2: #ff9bb8; /* Rosa coral */
+    --color-texto: #5a5a5a; /* Gris oscuro suave */
+    --color-fondo: #fff9fc; /* Blanco con tono rosa muy tenue */
+    --color-bordes: #f5c3d2; /* Rosa claro para bordes */
+    --sombra-suave: 0 4px 15px rgba(255, 126, 185, 0.12);
+    --sombra-hover: 0 8px 25px rgba(255, 126, 185, 0.18);
+    --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    --degradado-boton: linear-gradient(45deg, var(--color-primario), var(--color-acento));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="%23ffd3e0" fill-opacity="0.2" d="M30,10 Q50,5 70,10 Q95,20 90,40 Q85,65 50,90 Q15,65 10,40 Q5,20 30,10" /></svg>'),
+        url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="%23d8a7ca" fill-opacity="0.1" d="M20,20 Q40,5 60,20 Q80,35 75,60 Q70,85 40,75 Q10,65 15,40 Q20,25 20,20" /></svg>');
+    background-size: 150px, 120px;
+    background-position: 10% 20%, 90% 80%;
+    background-repeat: no-repeat;
+}
+
+.contenedor-principal {
+    width: 100%;
+    max-width: 450px;
+    animation: aparecer 0.6s ease-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: var(--degradado-boton);
+    border-radius: 4px;
+}
+
+form {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-bordes);
+    transition: var(--transicion);
+    backdrop-filter: blur(5px);
+}
+
+form:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-3px);
+}
+
+.campo-formulario {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--color-texto);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-bordes);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transicion);
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: inherit;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ff7eb9" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(255, 126, 185, 0.2);
+}
+
+input[type="submit"] {
+    background: var(--degradado-boton);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: var(--transicion);
+    margin-top: 0.5rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(216, 167, 202, 0.4);
+}
+
+input[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: var(--transicion);
+}
+
+input[type="submit"]:hover::after {
+    left: 100%;
+}
+
+.mensaje {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 214, 224, 0.4);
+    color: var(--color-texto);
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicion);
+    position: relative;
+}
+
+a:hover {
+    color: var(--color-primario);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--degradado-boton);
+    transition: var(--transicion);
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Efectos especiales */
+::selection {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        background-size: 100px, 80px;
+    }
+    
+    form {
+        padding: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
